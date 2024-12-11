@@ -1,0 +1,223 @@
+:root{
+    --clr-emerald400: #34D399;
+}
+body {
+    display: flex;
+    overflow: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 20%;
+    background-color: var(--clr-emerald400);
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    height: 100%; 
+}
+
+.logo h1 {
+    font-family: "Libre Baskerville";
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.profile {
+    display: flex;
+    justify-content: center;
+}
+
+.profile_text {
+    padding-top: 5px;
+    padding-left: 10px;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    background-color: #444;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+nav ul li a:hover {
+    background-color: #27ae60;
+    border-radius: 5px;
+}
+
+.logout {
+    margin-top: auto;
+    padding-top: 20px;
+}
+
+.logout a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 20%;
+    width: 80%;
+    padding: 20px;
+    background-color: #f4f4f4;
+    overflow-y: auto;
+    height: 100vh;
+}
+
+header input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+/* Dashboard Cards */
+.dashboard-cards {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.card {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 160px;
+}
+
+.sales {
+    background: linear-gradient(to right, #FFBB96, #FE8196);
+    color: white;
+}
+
+.orders {
+    background: linear-gradient(to right, #6dd5ed, #2193b0);
+    color: white;
+}
+
+.visitors {
+    background: linear-gradient(to right, #9D9FF7, #9A55FF);
+    color: white;
+}
+
+/* Add Products Form */
+.add-products {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.add-products h2 {
+    margin-bottom: 20px;
+}
+
+.add-products label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.add-products input[type="text"],
+.add-products input[type="number"],
+.add-products input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.add-products button {
+    padding: 10px 20px;
+    background-color: var(--clr-emerald400);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-products button:hover {
+    background-color: #2ecc71;
+}
+
+.manage-products {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.manage-products h2 {
+    margin-bottom: 20px;
+}
+
+
+/* Table management */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+thead tr {
+    background-color: #e1e1e1;
+    font-weight: bold;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+td img {
+    width: 60px;
+    height: auto;
+    border-radius: 5px;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+.remove-btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.remove-btn:hover {
+    background-color: #c0392b;
+}

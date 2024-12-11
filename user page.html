@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Page Title -->
+    <title>User Page</title>
+    <!--JavaScript -->
+    <script type="module" src="src/userpage.js" defer></script>
+    <!-- Icon cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- styles -->
+     <link rel="stylesheet" href="style/modern normalize.css">
+     <link rel="stylesheet" href="style/user.css">
+  </head>
+
+  <body>
+    <!-- nav -->
+    <header>
+      <nav class="nav_bg_color">
+        <div class="container nav_bar">
+          <!-- Branding -->
+          <div class="nav_logo">
+            <h1 class="logo">OPULÉA</h1>
+          </div>
+          <!-- search bar -->
+          <div class="search_bar">
+            <input type="text" placeholder="Search..">
+            <button> <i class="fa-solid fa-magnifying-glass"></i> </button>
+          </div>
+          <!-- cart butto -->
+          <div class="cart_icon">
+            <button id="open_pop_up" class="cart-btn">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span class="cart-badge">0</span>
+            </button>
+          </div>
+  
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!-- Hero Section -->
+      <section>
+        <div class="container">
+          <div class="featured_slides">
+            <img class="featured" src="public/featured.jpg" alt="featured">
+          </div>
+        </div>
+      </section>
+      <!-- Product list -->
+      <section>
+
+        <div class="container">
+
+          <h2 class="product_header">Flash Sale</h2>
+          <div id="product_list" class="product_list"></div>
+          
+        </div>
+
+      </section>
+      <!-- Pop up cart -->
+       <section>
+        <div id="pop_up" class="pop_up hidden">
+          <div class="popup-content">
+            <span id="close_Pop_up" class="close">&times;</span>
+            <div class="user-container">
+              <h3 class="cart_headings">Cart</h3>
+              <table>
+                <tbody id="cartTableBody"></tr></tbody>
+            </table>
+            <button id="checkOut">Check Out</button>
+          </div>
+        </div>
+
+       </section>
+
+    </main>
+  </body>
+</html>

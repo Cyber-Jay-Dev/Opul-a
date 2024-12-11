@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+     <!-- Fonts -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+     <!--JavaScript -->
+     <script type="module" src="src/admin.js" defer></script>
+      <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+     <!-- styles -->
+      <link rel="stylesheet" href="style/modern normalize.css">
+      <link rel="stylesheet" href="style/admin.css">
+     <!-- Icon cdn -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="logo">
+        <h1>OPULÉA</h1>
+    </div>
+    <div class="profile">
+        <div class="avatar">A</div>
+        <div class="profile_text">
+          <span>Admin</span>
+          </br><small>Administrator</small>
+        </div>
+
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Add Products</a></li>
+            <li><a href="#">Manage Product</a></li>
+        </ul>
+    </nav>
+    <div class="logout">
+        <a href="#">Log out</a>
+    </div>
+</aside>
+
+<!-- Main Content -->
+<main class="main-content">
+    <!-- Search Bar -->
+    <header>
+        <input type="text" placeholder="Search">
+    </header>
+    <h2>Dashboard</h2>
+    <!-- Dashboard Cards -->
+    <section class="dashboard-cards">
+        <div class="card sales">
+          <div>
+            <h3>Weekly Sales</h3>
+          </div class="card_heading">
+            <p>₱100,000</p>
+            <span>Increased by 80%</span>
+        </div>
+        <div class="card orders">
+          <div class="card_heading">
+            <h3 >Weekly Orders</h3>
+          </div>
+            <p>32,109</p>
+            <span>Decreased by 5%</span>
+        </div>
+        <div class="card visitors">
+          <div class="card_heading">
+            <h3>Weekly Visitors</h3>
+          </div>
+            <p>12,531</p>
+            <span>Decreased by 1%</span>
+        </div>
+    </section>
+
+    <!-- Add Products Form -->
+    <section class="add-products">
+        <h2>Add Products</h2>
+        <form id="addProductForm">
+            <label for="product-name">Product Name:</label>
+            <input type="text" id="product-name" name="product-name" required>
+
+            <label for="price">Price:</label>
+            <input type="number" id="price" name="price" required>
+
+            <label for="image">Image:</label>
+            <input type="file" id="image" name="image" required>
+
+            <button type="submit">Add Product</button>
+        </form>
+    </section>
+    <section class="manage-products">
+      <h2>Manage Products</h2>
+      <table>
+          <thead>
+              <tr>
+                  <th>Image</th>
+                  <th>Product Name</th>
+                  <th>Price</th>
+                  <th>Remove</th>
+              </tr>
+          </thead>
+          <tbody id="productTableBody"></tr>
+          </tbody>
+      </table>
+  </section>
+  
+</main>
+</body>
+</html>
